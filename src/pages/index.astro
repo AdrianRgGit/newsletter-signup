@@ -1,12 +1,46 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import IlustrationSignDesktop from "../components/SVG/IlustrationSignDesktop.astro";
+import IlustrationSignMobile from "../components/SVG/IlustrationSignMobile.astro";
+import IconSuccess from "../components/Icons/IconSuccess.astro";
+import ListItem from "../components/ListItem.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		Hola
-	</main>
+  <main class="bg-white min-h-screen md:w-[50%] md:m-auto">
+    <header class="flex justify-center mb-4">
+      <IlustrationSignMobile />
+    </header>
+
+    <section class="p-4 flex flex-col gap-y-4">
+      <h1 class="title text-gray-1 text-4xl">Stay updated!</h1>
+      <p class="mb-2 text-lg">
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
+
+      <div class="flex flex-col gap-y-2 mb-4">
+        <ListItem text={"Product discovery and building what matters"} />
+        <ListItem text={"Measuring to ensure updates are a success"} />
+        <ListItem text={"And much more!"} />
+      </div>
+
+      <form action="POST" class="flex flex-col gap-y-4">
+        <label class="flex flex-col text-gray-1 font-semibold text-sm">
+          Email address
+          <input
+            type="email"
+            placeholder="email@company.com"
+            class="p-4 rounded-lg border border-gray-2 mt-2"
+          />
+        </label>
+        <button class="bg-gray-1 text-white p-4 rounded-lg font-bold" type="submit">Subscribe to monthly newsletter</button>
+      </form>
+    </section>
+  </main>
 </Layout>
 
 <style>
+	.title{
+		font-family: "Roboto-Bold";
+	}
 </style>
