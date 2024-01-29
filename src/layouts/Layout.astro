@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  @font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto-Regular.ttf");
+    width: 400;
+  }
+
+  @font-face {
+    font-family: "Roboto-Bold";
+    src: url("/assets/fonts/Roboto-Bold.ttf");
+    width: 700;
+  }
+
+  html {
+    font-family: "Roboto", system-ui, sans-serif;
+    color: white;
+    background: hsl(235, 18%, 26%);
+    background-size: 224px;
+  }
+</style>
