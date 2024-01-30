@@ -25,7 +25,7 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={onSubmitForm} class="flex flex-col gap-y-4">
+    <form onSubmit={onSubmitForm} class="flex flex-col gap-y-4 md:max-w-2xl">
       <label class="flex flex-col text-gray-1 font-semibold text-sm">
         <div class="flex justify-between items-center">
           <p>Email address</p>
