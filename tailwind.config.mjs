@@ -8,6 +8,9 @@ export default {
         "gray-1": "hsl(235, 18%, 26%)",
         "gray-2": "hsl(231, 7%, 60%)",
         "gray-3": "hsl(0, 0%, 100%)",
+
+        "gradient-1": "#FF5476",
+        "gradient-2": "#FF673E",
       },
     },
   },
