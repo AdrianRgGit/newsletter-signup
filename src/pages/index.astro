@@ -1,12 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import IlustrationSignDesktop from "../components/SVG/IlustrationSignDesktop.astro";
 import IlustrationSignMobile from "../components/SVG/IlustrationSignMobile.astro";
-import IconSuccess from "../components/Icons/IconSuccess.astro";
 import ListItem from "../components/ListItem.astro";
+import Form from "../components/Form.jsx";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Discovery">
   <main class="bg-white min-h-screen md:w-[50%] md:m-auto">
     <header class="flex justify-center mb-4">
       <IlustrationSignMobile />
@@ -24,23 +23,13 @@ import ListItem from "../components/ListItem.astro";
         <ListItem text={"And much more!"} />
       </div>
 
-      <form action="POST" class="flex flex-col gap-y-4">
-        <label class="flex flex-col text-gray-1 font-semibold text-sm">
-          Email address
-          <input
-            type="email"
-            placeholder="email@company.com"
-            class="p-4 rounded-lg border border-gray-2 mt-2"
-          />
-        </label>
-        <button class="bg-gray-1 text-white p-4 rounded-lg font-bold" type="submit">Subscribe to monthly newsletter</button>
-      </form>
+      <Form client:load />
     </section>
   </main>
 </Layout>
 
 <style>
-	.title{
-		font-family: "Roboto-Bold";
-	}
+  .title {
+    font-family: "Roboto-Bold";
+  }
 </style>
