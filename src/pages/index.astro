@@ -6,7 +6,7 @@ import Form from "../components/Form.jsx";
 ---
 
 <Layout title="Discovery">
-  <main class="bg-white min-h-screen md:w-[50%] md:m-auto">
+  <main class="bg-white min-h-screen md:w-[50%] md:m-auto md:rounded-xl">
     <header class="flex justify-center mb-4">
       <IlustrationSignMobile />
     </header>
@@ -18,9 +18,9 @@ import Form from "../components/Form.jsx";
       </p>
 
       <div class="flex flex-col gap-y-2 mb-4">
-        <ListItem text={"Product discovery and building what matters"} />
-        <ListItem text={"Measuring to ensure updates are a success"} />
-        <ListItem text={"And much more!"} />
+        <ListItem>Product discovery and building what matters</ListItem>
+        <ListItem>Measuring to ensure updates are a success</ListItem>
+        <ListItem>And much more</ListItem>
       </div>
 
       <Form client:load />
