@@ -10,11 +10,10 @@ const Form = () => {
     e.preventDefault();
     if (reExp.test(email)) {
       setInvalid(false);
-      console.log("Válido");
+      localStorage.setItem("email", email);
+      window.location.href = "/success";
     } else {
       setInvalid(true);
-      console.log("Inválido");
-
       setTimeout(() => {
         setInvalid(false);
       }, 3000);
@@ -23,7 +22,6 @@ const Form = () => {
 
   const handleInputChange = (e) => {
     setEmail(e.target.value);
-    console.log(email);
   };
 
   return (

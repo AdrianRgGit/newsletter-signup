@@ -1,0 +1,30 @@
+---
+import IconSuccess from "../components/Icons/IconSuccess.astro";
+import Layout from "../layouts/Layout.astro";
+import InteractiveText from "../components/InteractiveText.jsx";
+---
+
+<Layout title="Success">
+  <main
+    class="min-h-screen bg-white flex flex-col justify-around p-4 md:w-[50%] md:m-auto md:rounded-xl"
+  >
+    <div class="flex flex-col gap-y-8">
+      <IconSuccess />
+      <h1 class="title font-bold text-5xl text-gray-1">
+        Thanks for subscribing!
+      </h1>
+      <InteractiveText client:load />
+    </div>
+    <a
+      href="/"
+      class="bg-gray-1 text-white p-4 rounded-lg font-bold text-center"
+      >Dismiss message</a
+    >
+  </main>
+</Layout>
+
+<style>
+  .title {
+    font-style: "Roboto-Bold";
+  }
+</style>
